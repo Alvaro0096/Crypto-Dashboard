@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Font Awsome -->
+    <script src="https://kit.fontawesome.com/05b6677d4e.js" crossorigin="anonymous"></script>
+    <!-- JS -->
+    <script src="index.js" defer></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <!-- NAVBAR DESKTOP -->
+    <nav class="navbar">
+        <a href="#" class="navbar-logo">Dashboard</a>
+        <ul class="nav-items">
+            <li class="nav-item"><a href="#"><i class="fa-solid fa-user"></i><span>Item List</span></a></li>
+            <li class="nav-item"><a href="#"><i class="fa-solid fa-user"></i><span>Item List</span></a></li>
+            <li class="nav-item"><a href="#"><i class="fa-solid fa-user"></i><span>Item List</span></a></li>
+            <li class="nav-item"><a href="#"><i class="fa-solid fa-user"></i><span>Item List</span></a></li>
+        </ul>
+        <!-- TOGGLE BUTTON -->
+        <div id="toggle"></div>
+    </nav>
+
+    <!-- SIDEBAR MOBILE -->
+    <div id="sidebar" class="sidebar">
+        <ul class="sidebar-items">
+            <li class="sidebar-item"><a href="#"><i class="fa-solid fa-user-astronaut"></i><span>Item List</span></a></li>
+            <li class="sidebar-item"><a href="#"><i class="fa-solid fa-user-astronaut"></i><span>Item List</span></a></li>
+            <li class="sidebar-item"><a href="#"><i class="fa-solid fa-user-astronaut"></i><span>Item List</span></a></li>
+            <li class="sidebar-item"><a href="#"><i class="fa-solid fa-user-astronaut"></i><span>Item List</span></a></li>
+        </ul>
+    </div>
+
+    <!-- MAIN SECTION -->
+
+    <section class="section-hero">
+        <h1 class="hero-title">Crypto Dashboard</h1>
+        
+    </section>
+
+    <!-- TABLE COINS -->
+    <section class="section-table">
+        <div class="table-container">
+            <table class="table-coins">
+                <thead class="table-head">
+                    <tr class="table-row-head">
+                        <th class="table-header">#</th>
+                        <th class="table-header" colspan="3">Coins</th>
+                        <th class="table-header table-header-align">Price</th>
+                        <th class="table-header table-header-align">24hs</th>
+                        <th class="table-header table-header-align">Market Cap</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body-container" class="table-body">
+                    <template id="template-table-coin">
+                        <tr class="table-row-body">
+                            <td class="table-data-body data-id"></td>
+                            <td class="table-data-body data-icon-box"><img src="" class="data-icon"></td>
+                            <td class="table-data-body data-name"></td>
+                            <td class="table-data-body data-symbol"></td>
+                            <td class="table-data-body data-price"></td>
+                            <td class="table-data-body data-price-change"></td>
+                            <td class="table-data-body data-market-cap"></td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</body>
+</html>
