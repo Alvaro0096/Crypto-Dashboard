@@ -54,12 +54,13 @@ const handleTableData = (data) => {
 
 const handleColorPrice = () => {
     let pricePercentage = tableBody.querySelectorAll('.data-price-change');
+    const regExp = /^\D/;
     pricePercentage.forEach(value => {
-        let values = parseInt(value.innerHTML);
-        if(values > 0){
-            value.style.color = 'green';
-        } else {
+        let values = value.innerHTML;
+        if(regExp.test(values)){
             value.style.color = 'red';
+        } else {
+            value.style.color = 'green';
         }
     })
 }

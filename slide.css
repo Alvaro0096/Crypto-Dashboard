@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container-slide{
+    width: 100vw;
+    height: 20vh;
+    background-color: #111;
+    color: #fff;
+    overflow: hidden;
+}
+
+.slide-content{
+    list-style: none;
+    height: 100%;
+    display: flex;
+    animation: scrolling 5s linear infinite;
+}
+
+@keyframes scrolling{
+    0%{
+        transform: translateX(0vw);
+    }
+    100%{
+        transform: translateX(calc(-250px * 7));
+    }
+    /* recordear modificar aca porque esta para 9 y no 7 */
+}
+
+.slide-content li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    flex-shrink: 0;
+    font-size: 5rem;
+    white-space: nowrap;
+}
+
